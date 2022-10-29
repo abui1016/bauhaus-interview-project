@@ -6,7 +6,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [filter, setFilter] = useState("");
   const [data, setData] = useState([]);
-  const categories = [];
+  const categories = [""];
 
   // Fetch data
   useEffect(() => {
@@ -33,8 +33,8 @@ function App() {
     else categories.push(i.category);
   }
 
-  // console.log(data);
-  // console.log(categories);
+  console.log(data);
+  console.log(categories);
 
   return (
     <div>
