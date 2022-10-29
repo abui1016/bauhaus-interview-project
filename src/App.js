@@ -33,12 +33,11 @@ function App() {
     else categories.push(i.category);
   }
 
-  console.log(data);
-  console.log(categories);
+  // console.log(data);
+  // console.log(categories);
 
   return (
     <div>
-      Hello World
       {isLoading && <div>Loading...</div>}
       <Filter setFilter={setFilter} categories={categories} />
       <CardsList data={data} filter={filter} />
