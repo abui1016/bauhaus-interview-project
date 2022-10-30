@@ -1,8 +1,9 @@
+import "../styles/CardsList.css";
 import Card from "./Card";
 
 const CardsList = ({ data, filter }) => {
   return (
-    <div>
+    <div className="card-list">
       {data.map((item) => {
         if (item.category === filter || filter === "") {
           return (

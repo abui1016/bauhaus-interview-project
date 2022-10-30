@@ -1,9 +1,11 @@
+import "../styles/Card.css";
+
 const Card = ({ image, description }) => {
   return (
-    <div>
-      <div>
-        <img src={image} alt="" />
-        {description}
+    <div className="card">
+      <div className="content">
+        <img className="image" src={image} alt="" />
+        <div className="description">{description}</div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./styles/App.css";
 import CardsList from "./components/CardsList";
 import Filter from "./components/Filter";
 
@@ -37,10 +38,15 @@ function App() {
   // console.log(categories);
 
   return (
-    <div>
-      {isLoading && <div>Loading...</div>}
-      <Filter setFilter={setFilter} categories={categories} />
-      <CardsList data={data} filter={filter} />
+    <div className="main-container">
+      {!isLoading ? (
+        <>
+          <Filter setFilter={setFilter} categories={categories} />
+          <CardsList data={data} filter={filter} />
+        </>
+      ) : (
+        <>Loading...</>
+      )}
     </div>
   );
 }
