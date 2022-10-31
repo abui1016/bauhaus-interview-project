@@ -29,13 +29,11 @@ function App() {
   }, []);
 
   // Get categories for filtering
-  for (let i of data) {
-    if (categories.includes(i.category)) continue;
-    else categories.push(i.category);
+  if (data.length > 0) {
+    for (let i of data) {
+      if (!categories.includes(i.category)) categories.push(i.category);
+    }
   }
-
-  // console.log(data);
-  // console.log(categories);
 
   return (
     <div className="main-container">
